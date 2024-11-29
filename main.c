@@ -6,13 +6,6 @@
 
 #define MAX_LEN 100
 
-
-
-
-
-
-
-
 // Function to check if the character is a valid digit or operator
 int isValidCharacter(char c) {
     return isdigit(c) || c == '+' || c == '-' || c == '*' || c == '/';
