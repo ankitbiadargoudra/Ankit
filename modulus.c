@@ -14,7 +14,7 @@ int main() {
     printf("Enter the modulus M: ");
     scanf("%ld", &mod);
     
-    long result = 0;  
+    long result = 1;  
     while (exp > 0) {  
         if (exp % 2 == 1) {  
             result = (result * base) % mod; 
