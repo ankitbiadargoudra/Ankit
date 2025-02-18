@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+int stack[1000],stack[1000];
+int top=-1, top2=-1;;
+
+
+void insert(int stack[], int * topint num)
+{
+    top++;
+    stack[top]=num;
+}
+
+int pop()
+{
+    if(top==-1)
+    {
+        printf("No bookmarks\n");
+        return ;
+    }
+    printf("poped\n: %d",stack[top]);
+    int ele = stack[top];
+    top--;
+    return ele;
+}
+
+
+int* sortstack()
+{
+    if(top==-1 || top==0)
+    {
+        return ;
+    }
+    else{
+        for(int  i=top ; i>=0; i--)
+        {
+            int num = getmax();
+            push(stack2,&top2);
+        }
+
+    }
+}
+void display()
+{
+    int newstack[1000]=sortstack();
+    for( int i=0; i<top ; i++)
+    {
+        printf("%d",newstack[i]);
+    }
+}
+
+
+
+int main()
+{
+    int t ;
+    scanf("%d",&t);
+    while(t-->0)
+    {
+        char input[100];
+        fgets(input, sizeof(input), stdin);
+        input[strcspn(input, "\n")]='\0';
+        if(strcmp(input,"DELETE")==0)
+        {
+            pop();
+
+        }
+        else if(strcmp(input,"LIST")==0)
+        {
+            display();
+        }
+        else{
+            char * token = NULL;
+            token = strtok(input, "BOOKMARK<>\n");
+            int num = atoi(token);
+            insert(num);
+
+        }
+
+    }
+
+
+
+
+
+}
